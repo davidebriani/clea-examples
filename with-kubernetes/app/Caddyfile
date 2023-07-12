@@ -1,0 +1,4 @@
+:5000
+file_server
+header Access-Control-Allow-Origin "*"
+header Access-Control-Allow-Methods "OPTIONS,HEAD,GET,POST,PUT,PATCH,DELETE"

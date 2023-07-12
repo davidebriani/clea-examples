@@ -1,0 +1,20 @@
+apiVersion: skaffold/v4beta6
+kind: Config
+metadata:
+  name: with-kubernetes
+build:
+  artifacts:
+    - image: app
+      context: app
+      docker:
+        dockerfile: Dockerfile
+    - image: backend
+      context: backend
+      docker:
+        dockerfile: Dockerfile
+manifests:
+  rawYaml:
+    - k8s/app-deployment.yaml
+    - k8s/app-service.yaml
+    - k8s/backend-deployment.yaml
+    - k8s/backend.yaml
